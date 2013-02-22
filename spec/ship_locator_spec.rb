@@ -3,7 +3,8 @@ require 'lib/ship_locator'
 describe ShipLocator do
   it "returns true if small ship is in 2,2" do
 	@shipLocator = ShipLocator.new
-	@shipLocator.existShip?(2,2).should be_true	
+	@shipLocator.existShip?(2,2).should be_true
+	@shipLocator.coordsSmallShip.should == [2,2]	
   end
   it "returns false if small ship is in 1,1" do
 	@shipLocator = ShipLocator.new

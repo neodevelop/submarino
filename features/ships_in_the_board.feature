@@ -6,7 +6,8 @@ I wanna see my ships on the board
 
 Scenario: "Show the ships in the board"
 	Given I enter the game
-	Then I should see small ship at 2,2 and medium ship at 3,3
+	Then I should see small ship at 2,2 
+	And I should see medium ship at 3,3
 Scenario: "Show the ships in the board"
 	Given I enter the game
 	Then I should not see small ship at 1,1 and medium ship at 1,3

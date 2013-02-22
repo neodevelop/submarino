@@ -1,17 +1,17 @@
 class ShipLocator
+	attr_accessor :coordsSmallShip
 	def initialize
-		@@coordsSmallShip = [2,2]
-		@@coordsMedShip = [3,3,4,3]	
+		@coordsSmallShip = [2,2]
+		@coordsMedShip = [3,3,4,3]	
 	end
 	def existShip?(x,y)
-		exist = false
-		if(@@coordsSmallShip[0] == x and @@coordsSmallShip[1] == y)
-			exist =	true
-		end
-		
-		if((@@coordsMedShip[0] == x and @@coordsMedShip[1] == y) or (@@coordsMedShip[2] == x and @@coordsMedShip[3]))
-			exist = true
-		end
-		exist
-	end	
+		searchSmallShip(x,y) or searchMediumShip(x,y)
+	end
+
+	def searchSmallShip(xf,yf)
+		 ((@coordsSmallShip[0] == xf) and (@coordsSmallShip[1] == yf))
+	end
+	def searchMediumShip(xf,yf)
+		((@coordsMedShip[0] == xf and @coordsMedShip[1] == yf) or (@coordsMedShip[2] == xf and @coordsMedShip[3] == yf))
+	end
 end
