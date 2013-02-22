@@ -1,0 +1,9 @@
+Feature: Visualizar Naves en el tabler
+
+In order to start to play submarine game
+As a player 
+I wanna see my ships on the board
+
+Scenario: "Show the ships in the board"
+	Given I enter the game
+	Then I should see small ship at 2,2 and medium ship at 3,3
