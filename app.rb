@@ -8,3 +8,8 @@ end
 get "/" do 
 	erb :submarine	
 end
+
+get "/attack" do 
+	@mensaje = "Fallaste XD"
+	erb :submarine	
+end

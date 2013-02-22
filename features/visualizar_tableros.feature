@@ -57,3 +57,6 @@ Scenario Outline: "Ver el tablero del oponente"
 		|"o34"|
 		|"o44"|
 
+Scenario: "Muestra las coordenadas"
+	Given I start the web app
+	Then I should see ".*1.*2.*3.*4"
