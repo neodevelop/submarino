@@ -18,3 +18,27 @@ When /^I press "(.*)"$/ do |name|
   click_button(name)
 end
 
+Given /^I start the web app$/ do
+  visit '/'
+end
+
+Then /^I should not see "(.*?)"$/ do |text|
+  last_response.body.should_not =~ /#{text}/m
+end
+
+Then /^I should see a Button with name "(.*?)"$/ do |name|
+  click_button(name)
+end
+
+Then /^I should see a Button with name <resultado>$/ do
+  click_button(name)
+end
+
+Then /^I should see a Button with name "(.*?)" with value="(.*?)"$/ do |name, value|
+  #click_button(name)
+	ButtonLocator.locate(name)
+#	button.value.should == "B"
+end
+
+
+
