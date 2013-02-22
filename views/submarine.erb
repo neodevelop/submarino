@@ -7,23 +7,25 @@ Submarino!!!
 Yo
 <br/>
 &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;4
-<form id="jugador">
-1<input type="button" id="11" name="11" />
-<input type="button" id="21" name="21" />
-<input type="button" id="31" name="31" />
-<input type="button" id="41" name="41" /><br/>
-2<input type="button" id="12" name="12" />
-<input type="button" id="22" name="22" />
-<input type="button" id="32" name="32" />
-<input type="button" id="42" name="42" /><br/>
-3<input type="button" id="13" name="13" />
-<input type="button" id="23" name="23" />
-<input type="button" id="33" name="33" />
-<input type="button" id="43" name="43" /><br/>
-4<input type="button" id="14" name="14" />
-<input type="button" id="24" name="24" />
-<input type="button" id="34" name="34" />
-<input type="button" id="44" name="44" />
+<form id="jugador" >
+1
+<input type="submit" id="11" name="11" value="<%= @jugador_1_1 %>"/>
+
+<input type="submit" id="21" name="31" value=""/>
+<input type="submit" id="31" name="31" value=""/>
+<input type="submit" id="41" name="41" value=""/><br/>
+2<input type="submit" id="12" name="12" value=""/>
+<input type="submit" id="22" name="22" value=""/>
+<input type="submit" id="32" name="32" value=""/>
+<input type="submit" id="42" name="42" value=""/><br/>
+3<input type="submit" id="13" name="13" value=""/>
+<input type="submit" id="23" name="23" value=""/>
+<input type="submit" id="33" name="33" value=""/>
+<input type="submit" id="43" name="43" value=""/><br/>
+4<input type="submit" id="14" name="14" value=""/>
+<input type="submit" id="24" name="24" value=""/>
+<input type="submit" id="34" name="34" value=""/>
+<input type="submit" id="44" name="44" value=""/>
 </form>
 </td>
 <td width="100px"/>
@@ -32,22 +34,34 @@ CPU
 <br/>
 &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;4
 <form id="oponente" action="/attack">
-1<input type="button" id="o11" name="o11" />
-<input type="button" id="o21" name="o21" />
-<input type="button" id="o31" name="o31" />
-<input type="button" id="o41" name="o41" /><br/>
-2<input type="button" id="o12" name="o12" />
-<input type="button" id="o22" name="o22" />
-<input type="button" id="o32" name="o32" />
-<input type="button" id="o42" name="o42" /><br/>
-3<input type="button" id="o13" name="o13" />
-<input type="button" id="o23" name="o23" />
-<input type="button" id="o33" name="o33" />
-<input type="button" id="o43" name="o43" /><br/>
-4<input type="button" id="o14" name="o14" />
-<input type="button" id="o24" name="o24" />
-<input type="button" id="o34" name="o34" />
-<input type="button" id="o44" name="o44" />
+1
+<input type="submit" id="o11" name="o11" value=""/>
+
+<input type="submit" id="o21" name="o21" value=""/>
+<input type="submit" id="o31" name="o31" value=""/>
+<input type="submit" id="o41" name="o41" value=""/><br/>
+2<input type="submit" id="o12" name="o12" value=""/>
+<input type="submit" id="o22" name="o22" value=""/>
+<input type="submit" id="o32" name="o32" value=""/>
+<input type="submit" id="o42" name="o42" value=""/><br/>
+3<input type="submit" id="o13" name="o13" value=""/>
+</form>
+
+<form action="/attack">
+<input type="hidden" name="x" value="2"/><input type="hidden" name="y" value="3" />
+<input type="submit" id="o23" name="o23" value="<%= @jugador_2_3 %>"/>
+</form>
+
+<form>
+<input type="submit" id="o33" name="o33" value=""/>
+<input type="submit" id="o43" name="o43" value=""/><br/>
+4<input type="submit" id="o14" name="o14" value=""/>
+<input type="submit" id="o24" name="o24" value=""/>
+<input type="submit" id="o34" name="o34" value=""/>
+</form>
+<form action="/attack">
+<input type="hidden" name="x" value="4"/><input type="hidden" name="y" value="4" />
+<input type="submit" id="o44" name="o44" value=""/>
 </form>
 </td>
 </tr>
